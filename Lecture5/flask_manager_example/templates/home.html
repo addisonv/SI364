@@ -1,0 +1,26 @@
+<ul>
+    <li><a href="{{ url_for('get_movies') }}">Movies</a></li>
+    <li><a href="{{ url_for('get_directors') }}">Directors</a></li>
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+</ul>
+
+{% block content %}
+
+<p>Movies:</p>
+<form action="/" method="POST">
+    {{ form1.hidden_tag() }}
+    {{ form1.name.label() }} {{ form1.name() }}<br>
+    {{ form1.year.label() }} {{ form1.year() }}<br>
+    {{ form1.submit() }}
+</form>
+
+<br>
+<p>Directors:</p>
+<form action="/" method="POST">
+    {{ form2.hidden_tag() }}
+    {{ form2.person_name.label() }} {{ form2.person_name() }}<br>
+    {{ form2.city.label() }} {{ form2.city() }}<br>
+    {{ form2.submit() }}
+</form>
+
+{% endblock %}

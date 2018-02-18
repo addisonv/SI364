@@ -1,0 +1,9 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<ol>
+{% for m in movies %}
+    <li><b>{{ m[0].name }}</b> by {{ m[1].full_name }}</li>
+{% endfor %}
+</ol>
+{% endblock %}

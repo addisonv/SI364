@@ -1,0 +1,14 @@
+<ul>
+    <li><a href="{{ url_for('movies') }}">Movies</a></li>
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+</ul>
+
+{% block content %}
+<p>Movies:</p>
+<form action="/" method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label() }} {{ form.name() }}<br>
+    {{ form.director_name.label() }} {{ form.director_name() }}<br>
+    {{ form.submit() }}
+</form>
+{% endblock %}

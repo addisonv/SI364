@@ -1,0 +1,14 @@
+<html>
+	<title>
+	</title>
+	<body>
+		<form method = "POST" action="http://localhost:5000/zipcode_result">
+			{{ form.hidden_tag() }}
+      		{% for message in get_flashed_messages() %}
+      		{{ message }}
+      		{% endfor %}
+			<h3>{{ form.zip_code.label }}{{ form.zip_code() }}</h3>
+			{{ form.submit() }}
+		</form>
+	</body>
+</html>
